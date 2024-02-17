@@ -14,7 +14,7 @@ const validadeInput = ({ target }) => {
   // se não for maior adicionamos o atributo disable novamente ao botão sem precisar usar o else
   button.setAttribute("disabled", "");
 };
-// adicionando o ouvinte no input para excecutar a função
+
 const handleSubmit = (e) => {
   // bloqueando o envio do formulário
   e.preventDefault();
