@@ -20,13 +20,13 @@ let firstCard = "";
 let secondCard = "";
 
 const checkEndGame = () => {
-    // verificando todos os elementos que possuem a class disabled-cards
-    const disabledCards = document.querySelectorAll('.disabled-card');
+  // verificando todos os elementos que possuem a class disabled-cards
+  const disabledCards = document.querySelectorAll(".disabled-card");
 
-    // se o tamanho for igual a 12 acaba o jogo
-    if(disabledCards.length === 12){
-        alert('Parabéns, você conseguiu!');
-    }
+  // se o tamanho for igual a 12 acaba o jogo
+  if (disabledCards.length === 12) {
+    alert("Parabéns, você conseguiu!");
+  }
 };
 
 const checkCards = () => {
@@ -55,7 +55,7 @@ const checkCards = () => {
       firstCard = "";
       secondCard = "";
     }, 500);
-  };
+  }
 };
 
 // essa função adiciona a class que criamos no css
