@@ -29,7 +29,7 @@
 }
 
 .front {
-  background: url("../img/abelinha.jpg") center/cover no-repeat;
+  background: center/cover no-repeat;
   transform: rotateY(180deg);
 }
 
