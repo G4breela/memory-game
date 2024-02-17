@@ -35,8 +35,15 @@
 }
 
 .back {
-  background: url("../img/foguetinho.jpg") center/cover no-repeat;
+  background: url("../img/rocket.jpg") center/cover no-repeat;
   backface-visibility: hidden;
+}
+
+.name{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bolder;
+    font-size: 1.2em;
 }
 
 .reveal-card {
