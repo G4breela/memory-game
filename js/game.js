@@ -18,6 +18,12 @@ const createElement = (tag, className) => {
 
 // essa função adiciona a class que criamos no css
 const reavelCard = ({target}) => {
+
+    // esse if evita que uma carta que já tenha a class receba a classe novamente
+    if(target.parentNode.className.includes('reveal-card')){
+        return;
+    }
+
     // aqui setamos o elemento, mas selecionamos o pai desse elemento (o card) e adiciona a class
     target.parentNode.classList.add('reveal-card');
 };
