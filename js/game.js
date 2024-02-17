@@ -38,8 +38,13 @@ const createCard = (character) => {
 // função que carrega o jogo
 const loadGame = () => {
 
+    // um array que vai espalhar os personagens do array de personagens duplicando
+    const duplicateCharacters = [...characters, ...characters];
+    // embaralhando as cartas com o array duplicado utilizando o sort() com uma função que retorna um valor de math.random() - 0.5
+    const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
+
     // pega o array de personagens e para cada personagem, ou seja, cada item
-    characters.forEach((character) => {
+    shuffledArray.forEach((character) => {
         // a função createCard é executada com um personagem
         const card = createCard(character);
         // e adiciona o card criado dentro do nosso elementro grid de card 
