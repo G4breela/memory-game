@@ -1,5 +1,14 @@
 const grid = document.querySelector(".grid");
 
+// essa array recebe o mesmo valor que o nome das imagens que vão ficar no front
+const cards = [
+    'abelinha',
+    'cachorrinho',
+    'coelinho',
+    'gatinho',
+    'porquinho',
+    'ursinho'
+];
 // estamos criando elementos div através do js e como parametros vamos ter a tag e a class que o elemento vai receber
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
