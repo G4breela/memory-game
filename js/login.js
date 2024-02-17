@@ -7,6 +7,9 @@ const validadeInput = ({target}) => {
     if(target.value.length > 2){
         // removemos o atributo disable do botão
         button.removeAttribute('disabled');
+    }else{
+        // se não for maior adicionamos o atributo disable novamente ao botão
+        button.setAttribute('disabled', '');
     }
 }
 
