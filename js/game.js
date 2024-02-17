@@ -1,24 +1,26 @@
 const grid = document.querySelector('.grid');
 
-const createCard = () => {
-    // estamos criando elementos div através do js
-    const card = document.createElement('div');
-    const front = document.createElement('div');
-    const back = document.createElement('div');
+ // estamos criando elementos div através do js e como parametros vamos ter a tag e a class que o elemento vai receber
+const createElement = (tag, className) => {
+    const element = document.createElement(tag);
+    element.className = className;
+    return element;
+}
 
-    // aqui adicionamos as classes que existem na div já existente
-    card.className = 'card';
-    front.className = 'face front';
-    back.className = 'face back';
+const createCard = () => {
+   // então vamos criar um elemento div com a class card
+    const card = createElement('div', 'card');
+
+    // a mesma coisa aqui, vamos criar um elemento div com a class face front
+    const front = createElement('div', 'face front');
+
+    // a mesma coisa aqui, vamos criar um elemento div com a class face back
+    const back = createElement('div', 'face back');
 
     // para criar a mesma estrutura que temos no html precisamos adicionar o front e o back dentro da div card
     // utilizando o appendChild();
     card.appendChild(front);
     card.appendChild(back);
 
-
-    // aqui vamos adicionar o card com os seus elementos dentro do grid conforme a card já existente
-    grid.appendChild(card);
+    return card;
 };
-
-createCard();
