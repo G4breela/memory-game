@@ -2,12 +2,12 @@ const grid = document.querySelector(".grid");
 
 // essa array recebe o mesmo valor que o nome das imagens que vão ficar no front
 const characters = [
-  "abelinha",
-  "cachorrinho",
-  "coelinho",
-  "gatinho",
-  "porquinho",
-  "ursinho",
+  "bee",
+  "puppy",
+  "cow",
+  "cat",
+  "pig",
+  "bear",
 ];
 // estamos criando elementos div através do js e como parametros vamos ter a tag e a class que o elemento vai receber
 const createElement = (tag, className) => {
@@ -87,13 +87,20 @@ const createCard = (character) => {
   // a mesma coisa aqui, vamos criar um elemento div com a class face back
   const back = createElement("div", "face back");
 
+  // criei um elemento que vai ser o nome do personagem
+  const name = createElement("p", "name");
+
   // aqui adicionamos a imagem percorrenco o array e pegando o valor e passando um caminho
   front.style.backgroundImage = `url(../img/${character}.jpg)`;
+  // escreve o nome do personagem
+  name.innerText = `${character}`;
 
   // para criar a mesma estrutura que temos no html precisamos adicionar o front e o back dentro da div card
   // utilizando o appendChild();
   card.appendChild(front);
   card.appendChild(back);
+  // adiciono como elemento filho do front
+  front.appendChild(name);
 
   // adicionado um ouvinte para que quando o card for clicado executar uma função
   card.addEventListener("click", reavelCard);
