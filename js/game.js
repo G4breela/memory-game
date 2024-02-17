@@ -16,6 +16,12 @@ const createElement = (tag, className) => {
   return element;
 };
 
+// essa função adiciona a class que criamos no css
+const reavelCard = ({target}) => {
+    // aqui setamos o elemento, mas selecionamos o pai desse elemento (o card) e adiciona a class
+    target.parentNode.classList.add('reveal-card');
+};
+
 const createCard = (character) => {
   // então vamos criar um elemento div com a class card
   const card = createElement("div", "card");
@@ -31,6 +37,9 @@ const createCard = (character) => {
   // utilizando o appendChild();
   card.appendChild(front);
   card.appendChild(back);
+
+    // adicionado um ouvinte para que quando o card for clicado executar uma função
+    card.addEventListener('click', reavelCard);
 
   return card;
 };
