@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 const spanPlayer = document.querySelector('.player');
+const timer = document.querySelector('.timer')
 
 // essa array recebe o mesmo valor que o nome das imagens que vão ficar no front
 const characters = [
@@ -26,7 +27,8 @@ const checkEndGame = () => {
 
   // se o tamanho for igual a 12 acaba o jogo
   if (disabledCards.length === 12) {
-    alert("Parabéns, você conseguiu!");
+    clearInterval(this.loop);
+    alert(`Congratulations ${spanPlayer.innerHTML}! your time was: ${timer.innerHTML} seconds`);
   }
 };
 
@@ -129,7 +131,13 @@ const loadGame = () => {
 };
 
 const startTimer = () => {
-
+    
+    this.loop = setInterval(() => {
+        // transforma em numero o que está escrito no timer
+        const currentTime = +timer.innerHTML;
+        // timer passa a ser o numero + 1
+        timer.innerHTML = currentTime+ 1;
+    }, 1000);
 }
 
 // só vai executar depois que os elementos forem carregados
@@ -137,7 +145,8 @@ window.onload = () => {
 
     // escrevemos o nome do player salvo no localStorage no span 
     spanPlayer.innerHTML = localStorage.getItem('player');
-
+    // executa a função
+    startTimer();
     //executa a função
     loadGame();
 };
