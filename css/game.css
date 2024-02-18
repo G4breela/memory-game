@@ -7,7 +7,8 @@ main{
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    padding: 20px 20px 50px;
+    padding: 20px 20px 10px;
+    padding-top: 0;
     background-color: #101483de; 
 }
 
@@ -18,7 +19,7 @@ header{
     width: 100%;
     max-width: 800px;
     padding: 30px;
-    margin: 0 0 30px;
+    margin: 0 0 15px;
     border-radius: 5px;
     background-color: rgba(211, 211, 211, 0.418);
     color: #fff;
@@ -78,4 +79,18 @@ header{
 .disabled-card {
   filter: saturate(0);
   opacity: 0.5;
+}
+
+a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(211, 211, 211, 0.418);
+  border-radius: 5px;
+  font-size: 1.2em;
 }
