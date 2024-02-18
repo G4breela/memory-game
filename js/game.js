@@ -1,4 +1,5 @@
 const grid = document.querySelector(".grid");
+const spanPlayer = document.querySelector('.player');
 
 // essa array recebe o mesmo valor que o nome das imagens que vão ficar no front
 const characters = [
@@ -127,4 +128,16 @@ const loadGame = () => {
   });
 };
 
-loadGame();
+const startTimer = () => {
+
+}
+
+// só vai executar depois que os elementos forem carregados
+window.onload = () => {
+
+    // escrevemos o nome do player salvo no localStorage no span 
+    spanPlayer.innerHTML = localStorage.getItem('player');
+
+    //executa a função
+    loadGame();
+};
