@@ -1,12 +1,37 @@
 @charset "UTF-8";
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 20px 50px;
+    background-color: #101483de; 
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
+    background-color: rgba(211, 211, 211, 0.418);
+    color: #fff;
+    font-size: 1.2em;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   width: 100%;
   max-width: 800px;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 
 .card {
